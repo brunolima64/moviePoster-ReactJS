@@ -15,7 +15,6 @@ export const Home = () => {
 	const searchShowCtx = useContext(SearchShowCtx); // renderizar o searchMovi
 	const [movies, setMovies] = useState<MovieType[]>([]);
 	const [moviesFiltered, setMoviesFiltered] = useState<MovieType[]>([]);
-	const [loadingSearch, setLoadingSearch] = useState(false); //efeito de loading. ( ainda nao feito )
 
 
 	useEffect(()=>{
@@ -47,7 +46,7 @@ export const Home = () => {
 				<Skeleton />
 			}
 
-			<C.Movies loadingSearch={loadingSearch}>
+			<C.Movies>
 				{moviesFiltered.length > 0 &&
 					moviesFiltered.map((item) => <MovieItem key={item.id} item={item} />)
 				}
