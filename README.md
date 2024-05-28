@@ -1,21 +1,27 @@
-  <h1>Poster Movies</h1>
-  </hr>
+<h1>Poster Movies</h1>
+<hr/>
 
-  <h2>Descrição</h2></br>
-  <p>
-    Este é um projeto React criado com Vite. O objetivo da aplicação é consultar uma API gratuita do TMDB e listar filmes de forma dinâmica e simples. Para desenvolver essa aplicação intuitiva, foram utilizadas as seguintes bibliotecas: Styled Components, React Router DOM e Axios.
-  </p></br>
+<h2>Description</h2>
+<br/>
+<p>
+  This is a React project created with Vite. The application's goal is to query a free API from TMDB and list movie posters dynamically and simply.
+</p>
+<br/>
 
-  <h2>Tecnologias Utilizadas</h2></br>
+<h2>Technologies Used</h2>
+<br/>
 
-  <ul>
-    <li>React: Biblioteca JavaScript para construção de interfaces de usuário.</li>
-    <li>vite: Ferramenta de build extremamente rápida e leve.</li>
-    <li>Styled Components: Biblioteca para estilização de componentes utilizando CSS-in-JS.</li>
-    <li>React Router DOM: Biblioteca para roteamento em aplicações React.</li>
-  </ul>
+<ul>
+  <li>React: JavaScript library for building user interfaces.</li>
+  <li>Vite: Extremely fast and lightweight build tool.</li>
+  <li>Styled Components: Library for styling components using CSS-in-JS.</li>
+  <li>React Router DOM: Library for routing in React applications.</li>
+</ul>
 
-  <h2>Como Iniciar o Projeto</h2></br>
- 
-   <p>1. Instalar as dependências: ( npm install ) </p></br>
-   <p>2. Rodar o servidor de desenvolvimento: ( npm run dev )</p></br>
+<h2>How to Start the Project</h2>
+<br/>
+
+<p>1. Install dependencies: ( npm install )</p>
+<br/>
+<p>2. Run the development server: ( npm run dev )</p>
+<br/>
