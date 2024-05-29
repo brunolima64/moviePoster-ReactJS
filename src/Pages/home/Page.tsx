@@ -17,15 +17,20 @@ export const Home = () => {
 	const [moviesFiltered, setMoviesFiltered] = useState<MovieType[]>([]);
 
 	useEffect(()=>{
+		// função para cuidar do search
 		const handleSearchMovie = () => {
 			setTimeout(()=>{
 				let newList = movies.filter(it => {
-					let verificationSearch = it.title.toLowerCase().indexOf(searchCtx?.search.toLowerCase());
-					if(verificationSearch !== -1 ) return it;
+					if(searchCtx?.search && searchCtx?.search !== '') {
+						let verificationSearch = it.title.toLowerCase().indexOf(searchCtx?.search.toLowerCase());
+						if(verificationSearch !== -1) return it;
+					} else {
+						return it;
+					}
 				});
 				
 				setMoviesFiltered(newList);
-			}, 2000);
+			}, 1000);
 		}
 
 		handleSearchMovie();
