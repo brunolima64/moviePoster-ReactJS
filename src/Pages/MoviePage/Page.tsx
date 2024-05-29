@@ -36,7 +36,9 @@ export const MoviePage = () => {
 	return (
 		<C.Container>
             <C.MovieArea>
-                <img src={`${VITE_IMG+movi?.poster_path}`} alt="" />
+                {movi?.id !== undefined &&
+					<img src={`${VITE_IMG+movi?.poster_path}`} alt="" />
+				}
 
 				{movi?.id === undefined &&
 				<SkeletonMovi />}
@@ -66,11 +68,13 @@ export const MoviePage = () => {
 					</C.infoP>
 
 					<C.infoP>
-						<strong>revenue: </strong>{revenue}
+						<strong>Revenue: </strong>{revenue}
 					</C.infoP>
+
+					<C.Button onClick={handlePrev}>Voltar</C.Button>  
 				</C.InfoArea>}
 
-				<C.Button onClick={handlePrev}>Voltar</C.Button>        
+				      
             </C.MovieArea>
         </C.Container>
 	)

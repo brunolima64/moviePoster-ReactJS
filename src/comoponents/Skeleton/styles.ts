@@ -14,6 +14,16 @@ export const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin: 60px 0px;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 40px 0px;
+    }
 `;
 
 export const MovieArea = styled.div`
@@ -33,6 +43,13 @@ export const MovieArea = styled.div`
         border-radius: 4px;
     }
 
+    @media (max-width: 750px) {
+        width: 150px;
+
+        .imgFake {
+            height: 200px;
+        }
+    }
 `;
 
 export const Title = styled.h1`

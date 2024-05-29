@@ -18,6 +18,10 @@ export const MovieArea = styled.div`
         width: 100%;
     }
 
+    @media (max-width: 750px) {
+        width: 150px;
+    }
+
 `;
 
 export const Title = styled.h1`
@@ -26,6 +30,11 @@ export const Title = styled.h1`
     font-size: 20px;
     min-height: 70px;
     margin: 10px 0;
+
+    @media (max-width: 750px) {
+        font-size: 15px;
+        min-height: 50px;
+    }
 `;
 
 export const Button = styled.button`
@@ -40,5 +49,9 @@ export const Button = styled.button`
 
     &:hover {
         opacity: .7;
+    }
+
+    @media (max-width: 750px) {
+        padding: 5px 10px;
     }
 `;

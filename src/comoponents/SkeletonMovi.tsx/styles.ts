@@ -17,16 +17,15 @@ export const Container = styled.div`
 
 export const MovieArea = styled.div`
     padding: 10px;
-    width: 600px;
+    width: 315px;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 6px;
     
-
     .imgFake {
         width: 100%;
-        height: 700px;
+        height: 500px;
         background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
         animation: ${shimmer} 1.5s infinite linear;
         border-radius: 4px;
@@ -67,3 +66,4 @@ export const Button = styled.button`
         opacity: .7;
     }
 `;
+

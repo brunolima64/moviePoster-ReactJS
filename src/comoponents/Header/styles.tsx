@@ -16,7 +16,8 @@ export const HeaderArea = styled.div`
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-    margin: auto;    
+    margin: auto;
+    padding: 0 20px;
 `;
 
 export const Logo = styled.div`
@@ -24,6 +25,12 @@ export const Logo = styled.div`
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    
 `;
 
-export const SearchInputArea = styled.div``;
+export const SearchInputArea = styled.div`
+    
+    @media (max-width: 352px) {
+        width: 170px;
+    }
+`;

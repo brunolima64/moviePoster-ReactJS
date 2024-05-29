@@ -15,9 +15,27 @@ export const Container = styled.div`
     }
 
     input {
+        width: 100%;
         font-size: 14px;
         border: 0;
         outline: none;
         padding: 0 10px;
+    }
+
+    @media (max-width: 420px) {
+        padding: 5px 5px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        input {
+            width: 100%;
+            font-size: 14px;
+            border: 0;
+            outline: none;
+            padding: 0 10px;
+        }
     }
 `;

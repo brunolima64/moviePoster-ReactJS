@@ -13,46 +13,48 @@ const apiKey = import.meta.env.VITE_API_KEY;
 export const Home = () => {
 	const searchCtx = useContext(SearchContext);
 	const searchShowCtx = useContext(SearchShowCtx); // renderizar o searchMovi
-	const [movies, setMovies] = useState<MovieType[]>([]);
+	const [movies, setMovies] = useState<MovieType[]>([]);// movies é apenas para controlar o skeleton
 	const [moviesFiltered, setMoviesFiltered] = useState<MovieType[]>([]);
-
 
 	useEffect(()=>{
 		const handleSearchMovie = () => {
 			setTimeout(()=>{
-				let newList = movies.filter(it => it.title.substr(0, searchCtx?.search.length).toLowerCase() === searchCtx?.search.toLowerCase());
+				let newList = movies.filter(it => {
+					let verificationSearch = it.title.toLowerCase().indexOf(searchCtx?.search.toLowerCase());
+					if(verificationSearch !== -1 ) return it;
+				});
+				
 				setMoviesFiltered(newList);
 			}, 2000);
 		}
 
 		handleSearchMovie();
-	}, [searchCtx?.search, moviesFiltered]);
+	}, [moviesFiltered]);
 
-	useEffect(()=>{
-		const getTopRatedMovies = async () => {
-			const res = await axios.get(`${moviesURL}top_rated?${apiKey}`); 
-			setMovies(res.data.results);
+	useEffect(()=>{	const getTopRatedMovies = async () => {
+		const res = await axios.get(`${moviesURL}top_rated?${apiKey}`); 
+			setMovies(res.data.results);//movies é apenas para controlar o skeleton
 			setMoviesFiltered(res.data.results); // para inicializar os filmes
 			searchShowCtx?.setSearchShow(true); // para exibir o searchMovi;
-		  };
+		};
 
 		getTopRatedMovies();
 	}, [])
 
 
+
 	return (
 		<C.Container>
-			{movies.length === 0 &&
-				<Skeleton />
-			}
+			{movies.length === 0 && <Skeleton />}
 
 			<C.Movies>
 				{moviesFiltered.length > 0 &&
-					moviesFiltered.map((item) => <MovieItem key={item.id} item={item} />)
+					moviesFiltered.map(item => <MovieItem key={item.id} item={item} />)
 				}
 			</C.Movies>
 
-			{movies.length > 0 && moviesFiltered.length === 0 &&
+			{/* Quando nao tiver itens. */}
+			{searchCtx?.search && moviesFiltered.length === 0 &&
 				<C.HaveNotMovie>There are no items to display.</C.HaveNotMovie>
 			}
     	</C.Container>
