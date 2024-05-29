@@ -1,13 +1,15 @@
 import { useContext } from 'react';
 import * as C from './styles';
 import { SearchContext } from '../../contexts/SearchContext';
+import  logoImg  from '../../../public/assets/search.png';
+
 
 export const SearchMovi = () => {
     const searchCtx = useContext(SearchContext);
     
     return (
         <C.Container>
-            <img src="../public/assets/search.png" alt="logo" />
+            <img src={logoImg} alt="logo" />
 
             <input 
                 type="text"

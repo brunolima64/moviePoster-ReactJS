@@ -4,7 +4,9 @@
 <h2>Description</h2>
 <br/>
 <p>
-  This is a React project created with Vite. The application's goal is to query a free API from TMDB and list movie posters dynamically and simply.
+  This is a React project created with Vite. The application's goal is to query a free API from TMDB and list movie posters dynamically and simply.</br>
+
+  <strong>Link to test the project:</strong> https://movie-poster-react-js-cc2x.vercel.app/
 </p>
 <br/>
 
