@@ -1,6 +1,6 @@
 import * as C from './styles';
 import { MovieType } from '../../types/MovieType';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const VITE_IMG =  import.meta.env.VITE_IMG;
 
@@ -12,7 +12,7 @@ export const MovieItem = ({item}: Props) => {
 
     const handleMovieItemShow = () => {
         navigate(`/${item.id}`);
-        
+
     }
 
 	return (
