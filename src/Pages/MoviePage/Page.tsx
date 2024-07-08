@@ -21,7 +21,7 @@ export const MoviePage = () => {
 	
 	useEffect(()=>{
 		const handleShowMoviItem = async () => {
-			const res = await axios.get(VITE_API+'/'+params.id+"?"+VITE_API_KEY);
+			const res = await axios.get(VITE_API+params.id+"?"+VITE_API_KEY);
 			setMovi(res.data);
 			searchShowCtx?.setSearchShow(false);
 		}

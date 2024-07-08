@@ -9,7 +9,5 @@ export const MainRoutes = () => {
         { path: '/', element: <Home />},
         { path: '/:id', element: <MoviePage />},
         { path: '*', element: <NotFound />},
-        // {path: 'photo/:id', element: <Image />},
-        
     ])
 }
